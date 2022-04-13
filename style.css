@@ -39,7 +39,6 @@ ul {
     display: flex;
     justify-content: center;
     background-color: var(--sidebar-bg);
-    border: var(--basic-border);
     grid-row: 1/-1;
     grid-column: 1;
     color: var(--base-color);
@@ -47,10 +46,12 @@ ul {
 }
 
 .header {
-    background-color: orange;
+    background-color: rgba(228, 202, 147, 0.473);
+    box-shadow: 1px 1px 2px 2px black;
     grid-column: 2/-1;
     grid-row: 1;
-    border: var(--basic-border);
+    display: grid;
+    grid-template-rows: 50% 50%;
 }
 
 .content-container {
@@ -82,8 +83,64 @@ ul {
     font-size: 1.1em;
 }
 
+.header-upper {
+    display: flex;
+    justify-content: space-between;
+    grid-row: 1;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-upper img {
+    height: 50px;
+    width: 50px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 50%;
+}
+
+.search-bar img {
+   width: 36px;
+   height: 36px;
+   margin-left: 1em;
+}
+
+.search-bar input {
+    width: 100%;
+    border-radius: 1em;
+    height: 2em;
+    background-color: lightgray;
+    padding: 5px;
+    box-shadow: none;
+}
+
+.profile-up {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+    justify-content: space-around;
+    padding-right: 1em;
+
+}
+
+.profile-up > img:first-child {
+    height: 25px;
+    width: 25px;
+}
+
+
 /* placeholder */
-.header, .content-container {
+.content-container {
     font-weight: bold;
     text-align: center;
     font-size: 3em;
