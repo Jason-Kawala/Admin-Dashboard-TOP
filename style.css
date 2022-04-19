@@ -25,7 +25,6 @@ ul {
 }
 
 .container {
-    position:fixed;
     top:0;
     left:0;
     height: 100%;
@@ -42,16 +41,17 @@ ul {
     grid-row: 1/-1;
     grid-column: 1;
     color: var(--base-color);
-    padding: 1em;
+    padding: 1.5em;
 }
 
 .header {
     background-color: rgba(224, 208, 208, 0.582);
-    box-shadow: 0px 0px 2px 0px black;
+    box-shadow: 0 4px 2px -2px gray;
     grid-column: 2/-1;
     grid-row: 1;
     display: grid;
     grid-template-rows: 50% 50%;
+    z-index: 2;
 }
 
 .content-container {
@@ -65,6 +65,7 @@ ul {
     display: grid;
     grid-template-rows: auto auto 1fr;
     row-gap: 1.5em;
+    padding-right: 3.5em;
 }
 
 .nav-title {
@@ -203,8 +204,41 @@ ul {
 
 /* placeholder */
 .content-container {
-    font-weight: bold;
-    text-align: center;
-    font-size: 3em;
-    color: white
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: rgb(181, 194, 207);
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 20px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    row-gap: 2em;
+    column-gap: 2em;
+    padding-left: 20px;
+    padding-bottom: 1em;
+}
+
+.card {
+    display: flex;
+    height: 250px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    gap: 10px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 0px 8px rgba(0,0,0,0), inset 14px -1px 0px 0px rgb(255, 202, 67);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 0px 8px rgba(0,0,0,0), inset 14px -1px 0px 0px rgb(255, 190, 26);
+}
+
+.projects-container > h2 {
+    text-align: left;
+    padding: 2em 0 1em 1em;
 }
