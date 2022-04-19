@@ -46,8 +46,8 @@ ul {
 }
 
 .header {
-    background-color: rgba(228, 202, 147, 0.473);
-    box-shadow: 1px 1px 2px 2px black;
+    background-color: rgba(224, 208, 208, 0.582);
+    box-shadow: 0px 0px 2px 0px black;
     grid-column: 2/-1;
     grid-row: 1;
     display: grid;
@@ -104,6 +104,7 @@ ul {
     gap: 10px;
     align-items: center;
     width: 50%;
+    padding-left: 1.5em;
 }
 
 .search-bar img {
@@ -112,13 +113,18 @@ ul {
    margin-left: 1em;
 }
 
-.search-bar input {
+#search {
     width: 100%;
-    border-radius: 1em;
     height: 2em;
     background-color: lightgray;
     padding: 5px;
     box-shadow: none;
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0;
+    border: none;
+    border-radius: 1em;
 }
 
 .profile-up {
@@ -136,6 +142,62 @@ ul {
 .profile-up > img:first-child {
     height: 25px;
     width: 25px;
+}
+
+.header-lower {
+    display: flex;
+    justify-content: space-between;
+    grid-row: 2;
+}
+
+.welcome {
+    display: flex;
+    width: 30%;
+    padding-left: 1.5em;
+    gap:1em;
+}
+
+.welcome img {
+    height: 80%;
+}
+
+.welcome-txt {
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-txt > p:first-child {
+    font-size: 15px;
+}
+
+.welcome-txt > p:last-child {
+    padding: 0 0 10px 0;
+}
+
+.header-btns {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: end;
+    gap: 24px;
+    padding-right: 24px;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 1em;
+    background-color: rgb(71, 131, 209,1);
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgb(48, 107, 184);
 }
 
 
