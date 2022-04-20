@@ -22,6 +22,7 @@ ul {
     --sidebar-bg: rgb(73, 139, 201);
     --basic-border: 1px solid black;
     --base-color: white;
+    --h2-padding: 2em 0 0.5em 1em;
 }
 
 .container {
@@ -45,7 +46,7 @@ ul {
 }
 
 .header {
-    background-color: rgba(224, 208, 208, 0.582);
+    background-color: rgba(245, 243, 243, 0.863);
     box-shadow: 0 4px 2px -2px gray;
     grid-column: 2/-1;
     grid-row: 1;
@@ -206,7 +207,7 @@ ul {
 .content-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    background-color: rgb(181, 194, 207);
+    background-color: rgb(185, 202, 219,0.9);
 }
 
 .project-container {
@@ -228,9 +229,14 @@ ul {
 
 .card {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 1em 4em 1em 2em;
     height: 250px;
     background-color: white;
-    color: black;
+    color: gray;
+    font-weight:500;
     border: none;
     border-radius: 10px;
     gap: 10px;
@@ -238,7 +244,55 @@ ul {
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 0px 8px rgba(0,0,0,0), inset 14px -1px 0px 0px rgb(255, 190, 26);
 }
 
+.card h2 {
+    color: black;
+}
+
+
+
+.card-icon {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2em;
+    padding-right: -2em;
+    gap: 20px;
+}
+
 .projects-container > h2 {
     text-align: left;
-    padding: 2em 0 1em 1em;
+    padding: var(--h2-padding);
+}
+
+.side-project {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-project h2:first-child {
+    padding: var(--h2-padding);
+    text-align: left;
+}
+
+#trending-title {
+    text-align: left;
+    padding: 1em 0 0.5em 1em;
+}
+.announcements-container {
+    height: 40%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1em;
+    border: 1px solid black;
+    margin: 0 1em 1em 1.5em;
+    padding: 1em;
+}
+
+.trending-container {
+    height: 40%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1em;
+    border: 1px solid black;
+    margin: 0 1em 1em 1.5em;
+    padding: 1em;
 }
